@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for ="nhapsodiem">Diem:</label>
+<input id ="nhapsodiem" type="text">
+<button onclick="kiemtra()" >Click !</button>
+<script>
+    function kiemtra() {
+        let a = document.getElementById("nhapsodiem").value;
+       if(a >=75&&a<100){
+           alert("SINH VIEN NAY DAT LOAI A");
+       }
+        else if (a<75&&a>=60){
+           alert("SINH VIEN NAY THUOC LOAI B");
+        }
+        else if (a<60&&a>=45){
+            alert("SINH VIEN NAY THUOC LOAI C");
+       }
+        else if (a<45&&a>=35){
+            alert("Sinh vien nay thuoc loai D");
+       }
+        else if(a<35&&a>0){
+            alert("Sinh vien nay thuoc loai E");
+       }
+        else {
+            alert("Diem so khong hop le ");
+       }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .container{
+    background-color :lightblue;
+        width:100%;
+        height:800px;
+    }
+    .contain{
+        background-color:white;
+        position :absolute;
+        width:50%;
+        height:60vh;
+        top:16%;
+        left:20%;
+    }
+    .contain h1 {
+        background-color: #ffae00;
+        text-align:center;
+        color:white;
+    }
+    .phan3 label{
+        color :blue;
+    }
+    .phan4 label{
+        color: #ff9900;
+    }
+    .hobby{
+        color:blue;
+    }
+</style>
+<form method ="GET">
+
+    <div class="container">
+    <div class="contain ">
+        <h1>SỞ THÍCH CỦA BẠN </h1>
+        <div class="phan3">
+<label for ="nhapten">Họ và Tên: </label>
+<input id ="nhapten"  type ="text"> <br> <br>
+<label  for ="nhapemail">Email:</label>
+<input id ="nhapemail" type ="email"></br>
+            <div class="hobby">
+    Sở Thích: <br>
+            </div>
+            <div class="phan4">
+    <label><input name="hobby" value="Web surfing " type="checkbox"/> Lướt web  </label>
+    <label><input name="hobby" value="Game" type="checkbox"/> Chơi Game </label>
+    <label><input name="hobby" value="Films" type="checkbox"/> Điện Ảnh </label> <br/>
+    <label><input name="hobby" value="travel" type="checkbox"/> Du lịch </label>
+    <label><input name="hobby" value="sport" type="checkbox"/> Thể thao</label>
+    <label><input name="hobby" value="Music" type="checkbox"/> Âm Nhạc </label>
+    <label><input name="hobby" value ="Reading" type="checkbox"/>Đọc Sách</label><br>
+    <input  type="submit" value="Gửi thông tin " >
+    <input type="reset" value ="Nhập Lại ">
+            </div>
+        </div>
+    </div>
+    </div>
+</form>
+</body>
+</html>

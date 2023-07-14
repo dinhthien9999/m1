@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .container{
+        background:white;
+        height:800px;
+        width:100%;
+    }
+    .contain{
+        background-color:lightyellow;
+        width:50%;
+        height:60vh;
+        position:absolute;
+        top:20%;
+        left:25%;
+    }
+    .contain h1{
+        color:blue;
+        background-color:lightblue;
+        text-align:center;
+    }
+    .phan1 label {
+        color :blue;
+    }
+</style>
+<form>
+    <div class="container">
+        <div class="contain">
+<h1>ĐĂNG KÍ HỌC VIÊN </h1>
+            <div class="phan1">
+    <label for="nhapten">Họ và Tên :</label>
+    <input id="nhapten" type="text">
+    <label for="birth">Ngày Sinh :</label>
+    <input id="birth" type="date"><br>
+                <label for ="gender">Giới Tính :</label>
+    <label><input name="gender" type="radio" id ="gender">Nam</label>
+  <label><input name="gender" type="radio" id="gender ">nữ<br></label>
+    <label for ="location">Địa Chỉ: </label><br>
+    <input id="location" type="textarea"><br><br>
+    <label for="class">Lớp:</label>
+    <select name="class" id="class">
+        <option value="">Chọn Lớp</option>
+        <option value="">10</option>
+        <option value="">11</option>
+        <option value="">12</option>
+    </select>
+    <br><br>
+    <label for="email">Email:</label>
+    <input id="email" type="email"><br><br>
+    <label for="phone">Số Điện Thoại :</label>
+    <input id="phone" type="number"><br><br>
+            </div>
+            <div class="phan2">
+    <input type="submit" value="Đăng Kí">
+    <input type="reset" value="Nhập Lại ">
+                </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

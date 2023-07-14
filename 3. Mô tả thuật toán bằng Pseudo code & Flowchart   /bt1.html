@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="nhapdiemLy">Diem Mon Vat Ly:</D></label>
+<input type = "number" id ="nhapdiemLy">
+<label for ="NhapdiemToan">Diem mon Toan :</label>
+<input type ="number" id ="nhapdiemToan">
+<label for ="NhapdiemHoa">Diem Mon Hoa Hoc</label>
+<input type ="number" id ="nhapdiemHoa">
+<button onclick ="tinhtoan()" >Click me !</button>
+<script>
+    function tinhtoan(){
+        let a = document.getElementById("nhapdiemLy").value;
+        let b = document.getElementById("nhapdiemToan").value;
+        let c = document.getElementById("nhapdiemHoa").value;
+        let averange = (a+b+c) / 3 ;
+        alert("result:"+averange);
+    }
+</script>
+</body>
+</html>
