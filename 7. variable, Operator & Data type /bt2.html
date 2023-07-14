@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="a"></label>
+<input id="a" type="number">
+<label for="b"></label>
+<input id="b" type="number">
+<button onclick="Cong()">Addition(+)</button>
+<button onclick="Tru()">Subtraction(-)</button>
+<button onclick="Nhan()">Multiplication(X)</button>
+<button onclick="Chia()">Division(/)</button>
+<SCRIPT>
+
+
+    function Cong(){
+        let a =document.getElementById("a").value;
+        let b =document.getElementById("b").value;
+        let result;
+        result=Number(a)+Number(b);
+        alert (result);
+    }
+    function Tru(){
+        let a =document.getElementById("a").value;
+        let b =document.getElementById("b").value;
+        let result;
+        alert(result=a-b);
+    }
+    function Nhan(){
+        let a =document.getElementById("a").value;
+        let b =document.getElementById("b").value;
+        let result;
+        alert(result=a*b);
+    }
+    function Chia(){
+        let a =document.getElementById("a").value;
+        let b =document.getElementById("b").value;
+        let result;
+        alert(result=a/b);
+    }
+</SCRIPT>
+</body>
+</html>

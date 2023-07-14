@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="nhapthang"></label>
+<input id="nhapthang" type="number">
+<button onclick="kiemtra()">Tinh so ngay </button>
+<script>
+    function kiemtra(){
+        let a =document.getElementById("nhapthang").value;
+        if(a==1||a==3||a==5||a==7||a==8||a==10||a==12){
+            alert("Tháng này có 31 ngày ");
+        }
+        else if(a==4||a==6||a==9||a==1){
+            alert("Tháng này có 30 ngày ");
+        }
+        else if (a==2){
+            alert("Có 28 ngày vào năm không nhuận , 29 ngày vào năm nhuận ");
+        }
+        else {
+            alert("Không  hợp lệ ");
+        }
+    }
+</script>
+</body>
+</html>

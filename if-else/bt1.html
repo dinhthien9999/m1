@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="chieucao">height</label>
+<input id="chieucao" type="number">
+<label for="cannang">weight</label>
+<input id="cannang" type="number">
+<button onclick="chuandoan()">Chuandoan</button>
+<script>
+    function chuandoan(){
+        let a=document.getElementById("chieucao").value;
+        let b =document.getElementById("cannang").value;
+        let bmi= b/(a^2);
+        if(bmi<18.5){
+            alert("You are UnderWeight");
+        }
+        else if(bmi<25.0&&bmi>=8.5){
+    alert("You are Normal");
+        }
+        else if(bmi<30.0&&bmi>=25.0){
+            alert("You OverWeight");
+        }
+        else if (bmi>30.0){
+            alert("You are Obese");
+        }
+    }
+</script>
+</body>
+</html>
