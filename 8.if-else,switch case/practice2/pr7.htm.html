@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =+prompt("Nhap gia tri a ");
+    let b =+prompt("Nhap gia tri b ");
+    let c =+prompt("Nhap gia tri c");
+    let denta = (b*b)-4*a*c;
+    if(a||0){
+    if(denta<0){
+        alert("Phuong trình bậc  hai vô nghiệm ");
+
+    }
+    else if(denta>0){
+        alert("Phuong trinh co hai nghiêm phan biet ");
+        let nghiem1 = ((-b+Math.sqrt(denta))/2*a);
+        let nghiem2 = ((-b-Math.sqrt(denta))/2*a);
+        alert("Nghiem thu nhat x="+nghiem1);
+        alert("Nhiem thu hai x="+nghiem2);
+
+    }
+    else if (denta=0){
+        alert("Phuong trinh có nghiem kep x=:"+-b/2*a);
+    }
+    }
+</script>
+
+</body>
+</html>
