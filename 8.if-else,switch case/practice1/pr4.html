@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =+prompt("nhap so thu nhat");
+    let b =+prompt("nhap so thu hai ");
+    let c =+prompt("nhap so thu ba ");
+    if(a>b&&a>c){
+        alert(a+"La so lon nhat trong ba so ");
+    }
+    else if (b>c&&b>a){
+        alert(b+"La so lon nhat trong ba so ");
+    }
+    else if(c>a&&c>b){
+        alert(c+" La so lon nhat trong ba so ");
+    }
+    else if (a==c&&b>a){
+        alert(b+"La so lon nhat trong ba so ");
+    }
+    else if(a=b&&c>a){
+        alert(c+"La so lon nhat trong ba so ");
+    }
+    else if(b=c&&a>b) {
+        alert(a + "La so lon nhat trong ba so ");
+    }
+    else {
+        alert("3 so có gia tri bang nhau ");
+    }
+</script>
+</body>
+</html>
