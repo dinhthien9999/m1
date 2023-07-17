@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a =+prompt("nhap so tien gui vao ");
+  let b =+prompt("nhap so nam  gui ngan hang ");
+  let result;
+  result=a*6/100/12*b;
+  alert("So lai nhan duoc sau khi rút "+result);
+  let c =+prompt("Nhap so nam neu ban muốn tiếp tục gửi ngân hàng để  có lãi kép ");
+  let result2=((a+result)*(1+6/100)^c);
+  alert("Số lãi bạn nhận được : "+result2);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =+prompt("nhap so luong hang thang ,Đv:Triệu Đồng ");
+    if(a<=5) {
+        alert("Thuế phải nộp :" + a * 10/100 - 0.25);
+    }
+    else if (a>10&&a<=18){
+        alert("Thuế phải nộp :"+a*15/100-0.75);
+    }
+    else if (a>18&&a<32){
+        alert("Thuế phải nộp:"+a*20/100-1.65);
+    }
+    else if(a>32&&a<=52){
+        alert("Thuế phải nộp :"+a*25/100-3.25);
+    }
+    else if(a>52&&a<80){
+        alert("Thu phải nộp :"+a*30/100-5.85);
+    }
+    else if (a>80){
+        alert("Thuế phải nộp "+a*35/100-9.85);
+    }
+</script>
+
+</body>
+</html>

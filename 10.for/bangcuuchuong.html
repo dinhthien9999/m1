@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let board = '<table border="10" width:"2000px" >'
+    let a = 1;
+    let b = 2;
+    for (a=1;a<=9;a++){
+        board=board+'<tr>'
+        for(b=2;b<=9;b++){
+            board=board+'<td>'+a+'x'+b+'='+a*b;
+        }
+        board=board+'<tr>';
+    }
+    board=board+'</table>';
+document.write(board);
+</script>
+
+</body>
+</html>

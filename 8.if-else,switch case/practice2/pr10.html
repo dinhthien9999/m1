@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = +prompt("nhap so KV điện mà bạn dùng ");
+  if(a<6){
+    let b =+prompt("nhap 1 cho giờ bình thường "+"nhap 2 cho giờ thấp điểm "+"nhap 3 cho giờ cao điểm ");
+    if(b==1){
+      alert("1,738/kWh");
+    }
+    else if(b==2){
+      alert("1.133/kWh");
+    }
+    else if(b==3){
+      alert("3.171/kWh");
+    }
+      }
+  else if (a>=6&&a<22){
+    let c =+prompt("nhap 1 cho giờ bình thường "+"nhap 2 cho giờ thấp điểm "+"nhap 3 cho giờ cao điểm");
+  if(c==1){
+    alert("1.661/kWh");
+  }
+  else if(c==2){
+    alert("1.075/kWh");
+  }
+  else if(c==3){
+    alert("3.055/kWh");
+  }
+  }
+  else if(a>=22&&a<110){
+  let d =+prompt("nhap 1 cho giờ bình thường "+"nhap 2 cho giờ thấp điểm "+"nhap 3 cho giờ cao điểm");
+    if(d ==1){
+      alert("1.604/kWh ");
+    }
+    else if (d==2){
+      alert("1.037/kWh");
+    }
+    else if(d==3){
+      alert("2.959/kWh");
+    }
+    else if (a>120){
+      let  e =+prompt("nhap 1 cho giờ bình thường "+"nhap 2 cho giờ thấp điểm "+"nhap 3 cho giờ cao điểm");
+      if(e ==1){
+        alert("1.584/kWh");
+      }
+      else if(e==2){
+        alert("999/kWh");
+      }
+      else if(e==3){
+        alert("2.844/kWh");
+      }
+    }
+  }
+
+
+
+</script>
+
+</body>
+</html>
