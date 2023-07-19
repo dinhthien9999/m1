@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick ="play()">Chơi !</button>
+<script>
+  function play(){
+    for ( let i = 0 ; i <=3; i++){
+      let a = +prompt(" Nhập số của bạn :")
+      if(a===10){
+        alert("Chúc mừng bạn đã chọn đúng .Mời chơi lại !!!")
+      }
+      else if ( a ===20){
+        alert("Gần đúng rồi .Cố lên nào !! ");
+      }
+      else {
+        alert("Mời bạn chọn lại ");
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
