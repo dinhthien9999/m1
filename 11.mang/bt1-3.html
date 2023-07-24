@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let  num=window.prompt();
+    let  st = num.toString();
+    let  result = [st[0]];
+
+    for(let x=1; x<st.length; x++)
+    {
+        if((st[x-1]%2 === 0)&&(st[x]%2 === 0))
+        {
+            result.push('-', st[x]);
+        }
+        else
+        {
+            result.push(st[x]);
+        }
+    }
+    document.writeln(result.join(''));
+
+</script>
+</body>
+</html>

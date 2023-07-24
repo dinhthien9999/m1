@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let numbers = [1,2,3,4,5,6,7,8,9,10];
+let english=["one","two","three","four","five","six","seven","eight","nine","ten"];
+
+for(let i =0 ; i<=10;i++){
+    let result=+prompt("nhap so tu 1 den 10");
+    if(result===numbers[i]){
+        numbers[i]=english[i];
+        alert(english[i]);
+    }
+}
+</script>
+
+</body>
+</html>

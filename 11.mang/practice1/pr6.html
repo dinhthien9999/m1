@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for ="nhapSoNguyen">SoNguyen:</label>
+<input id ="nhapSoNguyen" type="number">
+<label for ="V">V:</label>
+<input id ="V" type ="number">
+<button onclick="kiemTra()">Click!</button>
+<script>
+    function kiemTra() {
+        let soNguyen = document.getElementById("nhapSoNguyen").value;
+        let V = document.getElementById("V").value;
+        let soNguyen1 = soNguyen.split(",").map(Number);
+        let V1 = V.split(",").map(Number);
+        for (let i = 0; i <= soNguyen.length; i++) {
+            if (soNguyen1[i] === V1[i]) {
+                alert("V is in the array ");
+                break;
+            } else {
+                alert("V is not in the array")
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

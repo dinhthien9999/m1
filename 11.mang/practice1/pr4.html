@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for ="nhapSo">Nhap mang :</label>
+<input id ="nhapSo" type = text>
+<button onclick="daoNguoc()">Click!</button>
+<script>
+    function daoNguoc(){
+        let a = document.getElementById("nhapSo").value;
+       let  newA= a.split(",").map(Number);
+        newA.reverse();
+        alert(newA);
+    }
+
+
+</script>
+</body>
+</html>

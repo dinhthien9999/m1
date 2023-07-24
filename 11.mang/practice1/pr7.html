@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for ="nhapSo">Nhap so nguyen :</label>
+<input id ="nhapSo" type="text">
+<label for ="V">V:</label>
+<input id ="V" type ="text">
+<button onclick="kiemTra()">Click!</button>
+<script>
+  function kiemTra(){
+    let a =document.getElementById("nhapSo").value;
+    let b =document.getElementById("V").value;
+    let newB=b.split(",").map(Number);
+    let newA=a.split(",").map(Number);
+    let n =[];
+    for (let i =0 ; i<newA.length;i++){
+        if(newA[i] !== newB[i] ){
+            n.push(newA[i]!==newB[i]);
+        }
+    }
+      alert(n);
+
+  }
+</script>
+
+</body>
+</html>
