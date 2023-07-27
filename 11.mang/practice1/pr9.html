@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangA=[];
+    let soPhanTuA=parseInt(prompt("nhap so luong  phan tu muon dua vao mang  "));
+    for(let i =0 ; i <soPhanTuA;i++){
+        mangA.push(parseInt(prompt("nhap phan tu vao mang ")));
+    }
+    let mangB=[];
+    let soPhanTuB=parseInt(prompt("nhap so luong phan tu muon dua vao mang "));
+    for(let y = 0 ; y <soPhanTuB;y++){
+        mangB.push(parseInt(prompt("Nhap phan tu vao mang ")));
+    }
+    let mangC=[];
+   mangC= mangC.concat(mangA);
+   mangC= mangC.concat(mangB);
+    document.write("Mang C :"+"["+mangC+"]");
+</script>
+
+</body>
+</html>

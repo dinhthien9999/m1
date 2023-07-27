@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  let soNguyen= [];
+  let soPhanTu=parseInt(prompt("nhap so luong phan tu co trong mang  "));
+  for ( let i = 0 ; i<soPhanTu;i++){
+    soNguyen.push(parseInt(prompt("nhap phan tu ")));
+  }
+  soNguyen.sort(function (a,b) {
+    return b - a ;
+  });
+  document.writeln("Mang la :"+"["+soNguyen+"]");
+
+</script>
+
+</body>
+</html>
