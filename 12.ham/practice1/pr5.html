@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for ="nhapten">Nhập tên chòm sao :</label>
+<input id ="nhapten" type="text" >
+<button onclick = "kiemtra()">Click !</button>
+<div id="result"></div>
+<script>
+    function kiemtra() {
+        let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let Constellation = ['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor', 'Leo'];
+        let star = document.getElementById("nhapten").value;
+        for (let i = 0; i < stars.length; i++) {
+            if (stars[i] === star) {
+               document.getElementById("result").innerHTML = "Chom sao tuong uong la :"+Constellation[i];
+                return;
+            }
+        }
+
+        document.getElementById("result").innerHTML = "Không tìm thấy chòm sao tương ứng ";
+
+    }
+</script>
+</body>
+</html>

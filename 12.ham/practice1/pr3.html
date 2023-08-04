@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for ="nhapthamso1">Nhập tham số thứ nhất :</label>
+<input id ="nhapthamso1" type="text">
+<label for ="nhapthamso2">Nhập tham số thứ hai :</label>
+<input id ="nhapthamso2" type="text">
+<button onclick="ham()">Click me !</button>
+<script>
+    function ham(){
+        let a = +document.getElementById("nhapthamso1").value;
+        let b = +document.getElementById("nhapthamso2").value;
+        if(a >b){
+            alert("Tham số thứ nhất lớn hơn tham số thứ hai ");
+        }
+        else if(a>=b){
+            let result=a+b;
+            alert("Tong hai số là :"+result);
+        }
+    }
+</script>
+
+</body>
+</html>

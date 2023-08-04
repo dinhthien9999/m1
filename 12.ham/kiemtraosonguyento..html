@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="input">nhapso:</label>
+<input type="text" id ="input"/>
+<button onclick="checkPrime()">check</button>
+<span id ="result"></span>
+<script>
+  function checkPrime(){
+    let input = +document.getElementById("input").value;
+    let  result  = kiemTra(input);
+    if (result)
+    {
+      document.getElementById("result").innerHTML =input + ' is prime';
+    }
+    else {
+      document.getElementById("result").innerHTML =input + ' is not prime';
+    }
+  }
+  function kiemTra(a){
+    if (a===1)
+    {
+      return  false;
+    }
+    for (let i = 2; i < a; i++) {
+      if(a%i === 0){
+        return false;
+      }
+    }
+    return true;
+  }
+</script>
+
+</body>
+</html>
