@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   function kiemtra(character) {
+       return !isNaN(parseInt(character));
+   }
+   let inputCharacter=+prompt("Nhập kí tự :");
+   if(kiemtra(inputCharacter)){
+       document.write("Ký tự nhập  vào là số ");
+   }
+   else {
+document.write("Ký tự  nhập vào không phải dạng số ");
+   }
+
+</script>
+
+</body>
+</html>

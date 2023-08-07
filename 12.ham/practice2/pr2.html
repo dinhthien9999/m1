@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for ="nhapD">Nhập đường kính :</label>
+<input id ="nhapD" type="text">
+<button onclick ="chuVi()">Tính chu vi !</button>
+<button onclick="dienTich()">Diện Tích !</button>
+<script>
+  function chuVi(a){
+ a = document.getElementById("nhapD").value;
+  let result =a*3.14;
+  alert(result);
+  }
+  function dienTich(b){
+    b= document.getElementById("nhapD").value;
+    let result2= b*b*3.14;
+    alert(result2);
+  }
+</script>
+</body>
+</html>

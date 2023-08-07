@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="factorial()">Tính giai thừa :</button>
+<script>
+    function factorial() {
+        let num = +prompt("Nhập vào 1 số bất kì để tính ra giai thừa của số đó");
+        let factorialResult = 1;
+        for (let i = 1; i <= num; i++) {
+            factorialResult *= i;
+        }
+        alert(factorialResult);
+    }
+</script>
+</body>
+
+</html>
