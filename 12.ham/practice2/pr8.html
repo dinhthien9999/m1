@@ -6,7 +6,16 @@
 </head>
 <body>
 <script>
-
+function reserse(array){
+    return array.slice().reverse();
+}
+function main(){
+    let input=prompt("Nhập các phần t của mảng");
+    let inputArray=input.split(",").map(item=>parseInt(item.trim()));
+    let reversedArray=reserse(inputArray);
+    document.write("mảng:["+reversedArray+"]");
+}
+main();
 </script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function checkCharInArray(char,arr){
+    for (let i = 0 ; i <arr.length;i++){
+      if(arr[i]===char){
+        return true;
+      }
+    }
+    return false;
+  }
+  let  inputChar=prompt("Nhập kí tự :");
+  let  inputArray=prompt("Nhập  mảng :");
+  if (checkCharInArray(inputChar,inputArray)){
+    document.write('Ký tự '+inputChar+"nằm trong mảng "+inputArray );
+  }
+  else {
+    document.write('Ký tự '+inputChar+" không nằm trong mảng "+inputArray )
+  }
+</script>
+
+</body>
+</html>
