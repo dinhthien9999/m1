@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let mlyDate =function thien (day,month,year){
+    this.day=day;
+    this.month=month;
+    this.year=year;
+    this.getDay=function thien(){
+      return this.day;
+    }
+    this.getMonth=function thien(){
+      return this.month;
+    }
+    this.getYear=function thien (){
+      return this.year;
+    }
+    this.setDay=function thien (day){
+      this.day=day;
+    }
+    this.setMonth=function thien (month){
+      this.month=month;
+    }
+    this.setYear=function thien (year){
+      this.year=year;
+    }
+
+  }
+  let date=new myDate(2,2,2007);
+  let day=date.getDay();
+  let month=date.getMonth();
+  let year =date.getYear();
+  date.setDay(7);
+  date.setMonth(12);
+  date.setYear(2004);
+
+alert(day+"/"+month+"/"+ year);
+</script>
+</body>
+</html>

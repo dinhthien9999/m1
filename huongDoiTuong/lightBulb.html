@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="output"></p>
+<input type="submit" id ="switch" onclick="Switch()"/>
+<script>
+    function Switch(){
+        if(switchButton.getStatus()===true){
+            switchButton.switchOff();
+            document.getElementById('switch').value="Turn Off";
+            document.getElementById('output').innerHTML='Light Status: '+switchButton.lamp.getBright();
+        }
+        else{
+            switchButton.switchOn();
+            document.getElementById('switch').value="Turn On";
+            document.getElementById('output').innerHTML='Light Status: '+switchButton.lamp.getBright();
+        }
+    }
+   class SwitchButton{
+       constructor(status,lamp) {
+           this.status=status;
+           this.lamp=lamp;
+       }
+       connectToLamp(electricLamp){
+        this.lamp=electricLamp;
+       }
+       switchOff(){
+           this.status=false;
+           this.lamp.turnOff();
+       }
+       switchOn(){
+           this.status=true;
+           this.lamp.turnOn();
+       }
+       getStatus(){
+           return this.status;
+       }
+   }
+   class ElectricLamp{
+       constructor(status) {
+           this.status=status;
+       }
+       turnOff(){
+           this.status=false;
+       }
+       turnOn(){
+           this.status=true;
+       }
+       getBright(){
+           if(this.status===true){
+               return 'The right have been  turned off';
+
+           }
+           else{
+               return 'The light is  on ';
+
+           }
+       }
+       setStatus(value){
+           this.status= value;
+       }
+   }
+   let switchButton= new SwitchButton(true);
+   let electricLamp= new ElectricLamp(false);
+   if(switchButton.getStatus()===true){
+document.getElementById('switch').value='Turn On ';
+   }
+   else {
+       document.getElementById('switch').value='Turn Off';
+   }
+   switchButton.connectToLamp(electricLamp);
+    if(switchButton.getStatus()===true){
+switchButton.lamp.setStatus(true);
+    }
+    else{
+        switchButton.lamp.setStatus(false);
+    }
+    switchButton.connectToLamp(electricLamp);
+    document.getElementById('output').innerHTML='Light Status:'+switchButton.lamp.getBright();
+</script>
+
+</body>
+</html>

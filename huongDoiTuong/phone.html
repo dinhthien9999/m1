@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let phone = function(model){
+    this.model=model;
+    this.powerOn=false;
+    this.batteryLevel=100;
+    this.draftMessage='';
+    this.inbox=[];
+    this.sentMessage=[];
+    this.turnOn=function (){
+      this.powerOn=true;
+    }
+    this.turnOff=function (){
+      this.powerOn=false;
+    }
+    this.getBatteryLevel=function (){
+      return this.batteryLevel;
+    }
+    this.composeMessage=function(content){
+if(this.powerOn){
+  this.draftMessage=content;
+  this.batteryLevel--;
+}
+    }
+    this.receiveMessage=function (message){
+      if(this.powerOn){
+        this.inbox.push(message);
+        this.batteryLevel--;
+      }
+    }
+    this.sendMessage=function (receiver,content){
+      if(this.powerOn&&receiver instanceof phone ){
+        receiver.receiveMessage({ sender: this.model, content: content });
+        this.sentMessage.push(content);
+        this.batteryLevel--;
+      }
+    }
+    this.checkInbox=function (){
+      if(this.powerOn){
+        return this.inbox;
+      }
+    }
+    this.checkSentMessages=function (){
+      if(this.powerOn){
+        return this.sendMessage();
+      }
+    }
+    this.status=function (){
+      return this.powerOn?'On':"off";
+    }
+  }
+  let nokia=new phone ('Nokia');
+  let iphone=new phone('Iphone');
+  nokia.turnOn();
+  iphone.turnOn();
+nokia.composeMessage("Hello from the Nokia ");
+nokia.sendMessage(iphone,nokia.draftMessage);
+nokia.checkSentMessages();
+nokia.status();
+let inbox=iphone.checkInbox() ;
+alert("Inbox from the iphone"+inbox);
+nokia.turnOff();
+
+
+</script>
+</body>
+</html>

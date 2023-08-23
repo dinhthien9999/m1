@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas> </canvas>
+<script>
+  // Lấy thẻ canvas và ngữ cảnh vẽ 2D
+  let  canvas = document.getElementById("gameCanvas");
+  let  context = canvas.getContext("4d");
+
+  // Tạo đối tượng hình ảnh cho chiếc xe
+  let  carImage = new Image();
+  carImage.src = "car.png"; // Đường dẫn đến hình ảnh xe
+
+  // Xác định vị trí ban đầu của chiếc xe
+  let  carX = canvas.width / 2 - carImage.width / 2;
+  let  carY = canvas.height - carImage.height;
+
+  // Hàm vẽ chiếc xe lên canvas
+  function drawCar() {
+    context.drawImage(carImage, carX, carY);
+  }
+
+  // Hàm vòng lặp chính
+  function gameLoop() {
+    context.clearRect(0, 0, canvas.width, canvas.height); // Xoá màn hình
+
+    // Cập nhật và vẽ chiếc xe
+    updateCarPosition();
+    drawCar();
+
+    requestAnimationFrame(gameLoop); // Tiếp tục vòng lặp
+  }
+
+  // Bắt đầu vòng lặp game
+  gameLoop();
+
+  // Biến tốc độ di chuyển của xe
+  let  speed = 2;
+
+  // Hàm cập nhật vị trí chiếc xe
+  function updateCarPosition() {
+    carY -= speed; // Di chuyển chiếc xe lên trên
+  }
+
+  // Biến tốc độ tăng cường khi nhấn Ctrl
+  let  boostedSpeed = 4;
+  let  isBoosted = false;
+
+  // Lắng nghe sự kiện phím được nhấn và phát hành
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Control") {
+      isBoosted = true; // Tăng cường tốc độ khi nhấn Ctrl
+    }
+  });
+
+  document.addEventListener("keyup", function(event) {
+    if (event.key === "Control") {
+      isBoosted = false; // Ngừng tăng cường khi phát hành Ctrl
+    }
+  });
+
+  // Hàm cập nhật vị trí chiếc xe với tốc độ tùy thuộc vào tình trạng tăng cường
+  function updateCarPosition2() {
+    if (isBoosted) {
+      carY -= boostedSpeed; // Nếu tăng cường, di chuyển nhanh hơn
+    } else {
+      carY -= speed; // Ngược lại, di chuyển bình thường
+    }
+  }
+  updateCarPosition2();
+
+  // Biến tốc độ rẽ trái
+  let turnSpeed = 3;
+  let  isTurningLeft = false;
+
+  // Lắng nghe sự kiện phím mũi tên trái được nhấn và phát hành
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowLeft") {
+      isTurningLeft = true; // Bắt đầu rẽ trái khi nhấn mũi tên trái
+    }
+  });
+
+  document.addEventListener("keyup", function(event) {
+    if (event.key === "ArrowLeft") {
+      isTurningLeft = false; // Ngừng rẽ trái khi phát hành mũi tên trái
+    }
+  });
+
+  // Hàm cập nhật vị trí chiếc xe với tốc độ tùy thuộc vào tình trạng rẽ trái và tăng cường
+  function updateCarPosition3() {
+    if (isTurningLeft) {
+      carX -= turnSpeed; // Rẽ trái nếu đang được yêu cầu
+    }
+
+    if (isBoosted) {
+      carY -= boostedSpeed; // Nếu tăng cường, di chuyển nhanh hơn
+    } else {
+      carY -= speed; // Ngược lại, di chuyển bình thường
+    }
+  }
+  updateCarPosition3();
+
+
+
+</script>
+</body>
+</html>

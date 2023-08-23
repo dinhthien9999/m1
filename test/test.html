@@ -3,24 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
-<label for ="nhapMang">nhập Mảng :</label>
-<input id ="nhapMang" type="text">
-<button onclick="kiemtra()">Click me !</button>
 <script>
-    function kiemtra() {
-        let number =  document.getElementById("nhapMang").value;
-        let numbers=number.split(",").map(number);
-        let max = numbers[0];
-        for (let i = 0 ; i<numbers.length;i++){
-            if(numbers[i]>max){
-                max=numbers[i];
-            }
-        }
-        alert(max);
-    }
-</script>
 
+</script>
 </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+</canvas>
+<script>
+   let Rectangle = function (width,height){
+  this.width=width;
+  this.height=height;
+   this.getWidth=function (){
+     return this.width;
+   }
+   this.getHeight=function (){
+       return this.height;
+   }
+   this.setWidth=function (){
+       this.width=width;
+   }
+   this.setHeight=function (){
+       this.height=height;
+   }
+   this.getArea=function (){
+       return this. width*this.height
+
+   }
+   this.getPerimeter=function (){
+       return 2 *(this.width*this.height);
+   };
+   this.draw=function (){
+       let  canvas=document.getElementById("myCanvas");
+       let ctx=canvas.getContext("2d");
+       ctx.clearRect(0,0,canvas.width,canvas.height);
+       ctx.fillRect(10,10,this.width,this.height);
+   }
+
+  }
+  let rectangle=new Rectangle(100,50);
+   let width=rectangle.getWidth();
+   let height=rectangle.getHeight();
+   let area=rectangle.getArea();
+   let perimeter=rectangle.getPerimeter();
+   rectangle.draw()
+   rectangle.setWidth(70);
+   rectangle.setHeight(100);
+   rectangle.draw();
+   alert("Chieu dai :"+width);
+   alert("Chieu rong :"+height);
+
+   alert("Dien tich :"+area);
+   alert("Chu vi :"+perimeter);
+</script>
+</body>
+</html>

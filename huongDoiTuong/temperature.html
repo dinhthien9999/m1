@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let Perimeter=function (celius){
+    this.celius=celius;
+    this.toFahrenheit=function (){
+      return (this.celius*9/5)+32;
+    }
+    this.toKenvin=function (){
+      return this.celius+273.15;
+    }
+    this.getCelius=function (){
+      return this.celius;
+    }
+    this.setCelius=function (newCelius){
+      if(newCelius<-273){
+        alert("Temperature cannot be below -273 degrees Celsius.");
+      }
+      this.celius=newCelius;
+    }
+  }
+  let perimeter= new Perimeter(prompt('nhap do C:'));
+  let fahrenheit=perimeter.toFahrenheit();
+  let kenvin=perimeter.toKenvin();
+  alert("Do F :"+fahrenheit);
+  alert("Do K :"+kenvin);
+  perimeter.setCelius(30);
+  alert("Nhiet do sau khi thay doi :"+perimeter.getCelius())
+  let fahrenheit2=perimeter.toFahrenheit();
+  let kenvin2=perimeter.toKenvin();
+  alert("Do F :"+fahrenheit2);
+  alert("Do K :"+kenvin2);
+</script>
+</body>
+</html>
