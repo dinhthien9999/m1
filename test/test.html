@@ -7,6 +7,72 @@
 </head>
 <body>
 <script>
+let Apple=function (){
+    this.weight=10;
+    this.decrease =function (){
+        this.weight--;
+    }
+    this.isEmpty=function (){
+        return this.weight=0;
+    }
+    this.getWeight =function (){
+        return this.weight;
+    }
+}
+let Human=function (name,gender,weight){
+    this.name=name;
+    this.gender= gender;
+    this.weight=weight;
+this.isMale=function (){
+return this.gender="male";
+}
+this.setGender=function (){
+    this.gender= gender;
+}
+this.checkApple=function (){
+    return this.apple.weight;
+}
+this.eat=function (){
+    apple.weight--;
+    Human.weight++;
+}
+this.say=function (){
+    return console.log("I'm "+this.name+"and my weight is "+this.weight);
+}
+this.getName=function (){
+    this.name=name;
+}
+this.setName=function (){
+    return this.name;
+}
+this.setWeight=function (){
+    this.weight=weight;
+}
+this.getWeight=function (){
+    return this.weight;
+}
+}
+let Adam = new Human("Adam",true,80);
+Adam.say();
+let apple=new Apple;
+Adam.eat(apple);
+Adam.say();
+Adam.setWeight();
+apple.isEmpty();
+Adam.isMale();
+let Eva=new Human("Eva",true,"50");
+Eva.say();
+Eva.eat(apple);
+Eva.setName();
+Eva.getName();
+Eva.say();
+Eva.getWeight();
+Eva.setWeight();
+apple.isEmpty();
+Eva.setGender("Female");
+
+
+
 
 </script>
 </body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Switch(){
+        if(switchButton.getStatus()===true){
+            switchButton.switchOff();
+            document.getElementById('switch').value='Turn Off';
+            document.getElementById('output').innerHTML='Light Status'+switchButton.lamp.getBright();
+        }
+    }
+let SwitchButton=function (status,lamp){
+    this.status=status;
+    this.lamp=lamp;
+   this.connectToLamp=function (){
+       this.lamp=electricLamp;
+   }
+   this.switchOff=function (){
+       this.status=false;
+       this.lamp=lamp.turnOff();
+   }
+   this.switchOn=function (){
+       this.status=true;
+       this.lamp=lamp.turnOn();
+   }
+   this.getStatus=function (){
+       this.status=status;
+   }
+}
+let ElectricLamp=function (status){
+    this.status=status;
+    this.turnOn=function (){
+        this.status=true;
+    }
+    this.turnOff=function (){
+        this.status=false;
+    }
+    this.getBright=function () {
+        if (this.status === true) {
+            return 'The light have been turned off';
+        } else {
+            return 'The light is on ';
+        }
+    }
+    this.setStatus=function (){
+        this.status=value;
+    }
+
+}
+let switchButton=new SwitchButton(true);
+let eclectriclamp=new ElectricLamp(false);
+if(switchButton.getStatus()===true){
+    document.getElementById('switch').value='Turn On ';
+}
+else{
+    document.getElementById('switch').value='Turn Off';
+}
+switchButton.connectToLamp(eclectriclamp);
+if(switchButton.getStatus()===true){
+    switchButton.lamp.status(true);
+}
+else{
+    switchButton.lamp.setStatus(false);
+}
+switchButton.connectToLamp(eclectriclamp);
+document.getElementById('output').innerHTML='Light Status'+switchButton.lamp.getBright();
+
+
+</script>
+
+</body>
+</html>
